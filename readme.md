@@ -18,3 +18,20 @@ Here is what I need:
 
 Thank Mew,
 Mrs. Whib
+
+
+------------
+
+
+TO: TEACHER
+FROM: Flora Whib <info@whibconstruction.com>
+
+Dear Ms. Walker,
+Wow, your junior developers did a fantastic job! It's incredible they were able to fix all those pictures, well done.
+
+However, I see some have not finished the hover effects for the buttons. I like the lime green colour of the button when it starts, but the hover colour clashes really badly. Please change to something else.
+
+One other thing, can you make the fixed pictures animated? Maybe with a nice hover effect? Don't put too much time into it, just create an effect for the class that they all share.
+
+Mew-ci,
+Mrs. Whib
