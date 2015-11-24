@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Dosis:400,500,600' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.min.css" type='text/css'>
+        <link rel="stylesheet" href="css/main.css" type='text/css'>
+
+        <script src="scripts/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body style="background-image:url('img/backgrounds/loading_bg.jpg');">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="scripts/plugins.js"></script>
+        <script src="scripts/main.js"></script>
+        
+        <script type="text/javascript"><!--
+			jQuery(function($) {
+       			$('.loader').countTo({
+            		from: 0,
+            		to: 100,
+            		speed: 20000,
+            		refreshInterval: 100,
+            		onComplete: function(value) {
+                console.debug(this);
+            	}
+        	});
+    	});
+		//-->
+    	</script>
+        
+        <span class="loader">
+    	</span>
+        <span class="pct">
+        %
+        </span>
+      
+        <div id="start">
+        </div>
+        
+        <div class="zeropctmain" id="ninetypctmain">
+        </div>
+        
+        <div class="zeropctmain" id="sixtypctmain">
+        </div>
+        
+        <div class="zeropctmain" id="fourtypctmain">
+        </div>
+        
+		<div class="zeropctmain" id="twentypctmain">
+        </div>
+        
+        <div class="zeropctmain" id="zeropctopenmain">
+        </div>
+        
+        <div class="zeropct" id="zeropctopen">
+        </div>
+        
+        <div class="zeropct" id="twentypct">
+        </div>
+        
+        <div class="zeropct" id="fourtypct">
+        </div>
+        
+        <div class="zeropct" id="sixtypct">
+        </div>
+        
+        <div class="zeropct" id="ninetypct">
+        </div>
+        
+        <div class="zeropct" id="title">
+        </div>
+        
+        <div class="guide">
+        </div>
+        
+        <script type="text/javascript"><!--
+			$(document).ready(function(){
+    			$(".q2").hide();
+    			$("#start").hide();
+				$("#start2").hide();
+			});
+
+			$(document).ready(function(){
+				$("#next").click(function(){
+				$(".q1").fadeOut(350);
+				$(".q2").fadeIn(500);
+				$("#next").fadeOut(500);
+				$("#start").fadeIn(500);
+			});
+		});
+        //-->
+		</script>
+		
+        <div class="q2">
+        </div>
+        
+        <div class="q1">
+        </div>
+        
+        <div id="next">
+        </div>
+        
+        <a href="screens.html">
+        <div id="start2">
+        </div>
+        </a>
+        
+		<script type="text/javascript"><!--
+			$(document).ready(function(){
+				$(".guide").hide();
+				});
+				
+			$(document).ready(function(){
+				$("#start").click(function(){
+				$(".q2").fadeOut(475);
+				$("#start").fadeOut(475);
+				$(".zeropct").fadeOut(475);
+				$(".guide").fadeIn(600);
+				$("#start2").fadeIn(1000);
+			});
+		});
+        //-->
+		</script>
+    
+    </body>
+</html>

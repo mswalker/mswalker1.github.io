@@ -1,0 +1,100 @@
+body {
+	background: url("http://subtlepatterns.com/patterns/brilliant.png");
+}
+
+h1 {
+	font-family: 'Helvetica', Arial, sans-serif;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+p {
+	font-family: serif;
+	font-size: 1.4em;
+    line-height: 1.6em;
+	font-weight: 100;
+}
+
+	.special {
+		font-style: italic;
+	}
+
+	.small {
+		font-size: 0.8em;
+	}
+
+.menuContainer {
+	padding-bottom: 15px;
+}
+
+#nameCred {
+	color: #ddd;
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size:0.7em;
+	letter-spacing: 1em;
+	padding:20px 0;
+	text-align: center;
+}
+
+span.by {
+	color: #eee;
+}
+
+ul {
+	list-style-type: none;
+	font-size: 1.1em;
+	line-height: 1.8em;
+}
+
+	ul.prep {
+		list-style-type: none;
+		font-size: 0.9em;
+		font-style: italic;
+		font-weight: 100;
+	}
+
+	.menu {
+
+	}
+
+.content {
+	margin: 0 auto;
+	width: 53%;
+}
+
+.opening {
+	font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
+
+.title {
+	font-size: 3em;
+	letter-spacing: 0.05em;
+	color: #383838;
+	text-align: center;
+}
+
+.desc {
+	font-style: italic;
+    text-align: center;
+    margin: 5% 20%;
+}
+
+.closing {
+	text-align: center;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	padding: 40px 15px;
+	border-top: 2px solid #ddd;
+	margin-top: 10px;
+}

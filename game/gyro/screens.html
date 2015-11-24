@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Dosis:400,500,600' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.min.css" type='text/css'>
+        <link rel="stylesheet" href="css/screens.css" type='text/css'>
+
+        <script src="scripts/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="scripts/plugins.js"></script>
+        <script src="scripts/main.js"></script>
+
+    <div id="camerabody">
+    </div>
+    
+    <div id="hints">
+    </div>
+    
+	<script type="text/javascript"><!--
+			$(document).ready(function(){
+			$("#gift1").hide();
+			$("#popoutgift1").hide();
+			$("#info4").hide();
+			$("#info5").hide();
+			$("#info6").hide();
+		});
+     //-->
+	</script>
+
+	<script type="text/javascript"><!--
+			$(document).ready(function(){
+				$("#info1").click(function(){
+				if ($("#overlayinfo1").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo1").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo1").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+
+	<div class="info" id="info1">
+    </div>
+    
+    <div class="overlayin" id="overlayinfo1">
+    </div>
+    
+    <script type="text/javascript"><!--
+    		$(document).ready(function(){
+				$("#info2").click(function(){
+				if ($("#overlayinfo2").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo2").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo2").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+    
+    <div class="overlayin" id="overlayinfo2">
+    </div>
+    
+    <div class="info" id="info2">
+    </div>
+    
+    <script type="text/javascript"><!--
+    		$(document).ready(function(){
+				$("#info3").click(function(){
+				if ($("#overlayinfo3").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo3").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo3").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+    
+    <div class="overlayin" id="overlayinfo3">
+    </div>
+    
+    <div class="info" id="info3">
+    </div>
+
+   <div class="popoutin" id="popoutcollect1">
+    </div>
+    
+	<div class="collectable" id="collectable1">
+    </div>
+
+	<script type="text/javascript"><!--
+		$(document).ready(function(){
+				$("#collectable1").click(function(){
+				$("#popoutcollect1").show(350);
+				if ($("#popoutcollect1").hasClass('popoutin'))
+        		{
+            		$("#popoutcollect1").addClass('popout').removeClass('popoutin');
+					$("#collectable1").addClass('collectanim').removeClass('collectable');
+					$("#hudicons").css("background-image", "url('img/HUD/hud_icons2.png')");
+					$("#iconspct").html("4");
+        			}
+        		else
+        			{
+            		$("#popoutcollect1").addClass('popoutin').removeClass('popout');
+					$("#popoutcollect1").hide(500);
+        			}
+			});
+		});
+     //-->
+	</script>
+    
+    <script type="text/javascript"><!--
+			$(document).ready(function(){
+				$("#info4").click(function(){
+				if ($("#overlayinfo4").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo4").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo4").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+
+	<div class="info" id="info4">
+    </div>
+    
+    <div class="overlayin" id="overlayinfo4">
+    </div>
+    
+    <script type="text/javascript"><!--
+			$(document).ready(function(){
+				$("#info5").click(function(){
+				if ($("#overlayinfo5").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo5").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo5").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+
+	<div class="info" id="info5">
+    </div>
+    
+    <div class="overlayin" id="overlayinfo5">
+    </div>
+    
+    <script type="text/javascript"><!--
+			$(document).ready(function(){
+				$("#info6").click(function(){
+				if ($("#overlayinfo6").hasClass('overlayin'))
+        		{
+            		$("#overlayinfo6").addClass('overlay').removeClass('overlayin');
+        			}
+        		else
+        			{
+            		$("#overlayinfo6").addClass('overlayin').removeClass('overlay');
+        			}
+			});
+		});
+     //-->
+	</script>
+
+	<div class="info" id="info6">
+    </div>
+    
+    <div class="overlayin" id="overlayinfo6">
+    </div>
+    
+	<script type="text/javascript"><!--
+		$(document).ready(function(){
+				$("#gift1").click(function(){
+				$("#popoutgift1").show(350);
+				if ($("#popoutgift1").hasClass('popoutin'))
+        		{
+            		$("#popoutgift1").addClass('popout').removeClass('popoutin');
+					$("#gift1").addClass('giftanim').removeClass('gift');
+					$(".hudgifts").css("background-image", "url('img/HUD/hud_gifts1.png')");
+        			}
+        		else
+        			{
+            		$("#popoutgift1").addClass('popoutin').removeClass('popout');
+					$("#popoutgift1").hide(1000);
+        			}
+			});
+		});
+     //-->
+	</script>
+    
+    <div class="popoutin" id="popoutgift1">
+    </div>
+    
+    <div class="gift" id="gift1">
+    </div>
+    
+	<script type="text/javascript"><!--
+		$(document).ready(function(){
+		$("#proceed1").click(function(){
+			$("#proceed1").fadeOut(500);
+			$("#info1").fadeOut(500);
+			$("#info2").fadeOut(500);
+			$("#info3").fadeOut(500);
+			$("#overlayinfo1").fadeOut(500);
+			$("#overlayinfo2").fadeOut(500);
+			$("#overlayinfo3").fadeOut(500);
+			$("#collectable1").fadeOut(500);
+			$("#popoutcollect1").fadeOut(500);
+			$("#camerabody").css("background-image", "url('img/backgrounds/home-sized.jpg')");
+			$("#camerabody").css("background-position-y", "88%");
+			$("#camerabody").css("background-position-x", "38%");
+			$("#gift1").show(500);
+			$("#info4").show(500);
+			$("#info5").show(500);
+			$("#info6").show(500);
+		});	
+	 });
+     //-->
+	</script>
+
+	<div class="proceed" id="proceed1">
+    </div>
+
+	<div class="tophud">
+    </div>
+    
+    <div class="hudgifts">
+    </div>
+    
+    <div id="hudright">
+    </div>
+    
+    <div id="hudleft">
+    </div>
+    
+    <div class="hudspacetime">
+    </div>
+    
+    <div id="iconspct">
+    0
+    </div>
+    
+    <div id="hudiconsopener">
+    </div>
+    
+    <div id="hudicons">
+    </div>
+    
+    <div class="hudloc">
+    </div>
+    
+     <script type="text/javascript"><!--
+		$(document).ready(function(){
+    		$(".q2").hide();
+    		$("#start").hide();
+			});
+
+		$(document).ready(function(){
+				$("#next").click(function(){
+				$(".q1").fadeOut(350);
+				$(".q2").fadeIn(500);
+				$("#next").fadeOut(500);
+				$("#start").fadeIn(500);
+			});
+		});
+        //-->
+		</script>
+        
+        <div id="start">
+        </div>
+    
+    </body>
+</html>

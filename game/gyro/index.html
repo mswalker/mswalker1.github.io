@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type='text/javascript'>
+window.mod_pagespeed_start = Number(new Date());</script>
+
+<style type="text/css">
+body {
+	font-family:sans-serif;
+}
+
+.main {
+	background-image:url('img/backgrounds/city_background_night2.jpg');
+	background-repeat:repeat-x;
+	background-position:0% 80%;
+	width:1080px;
+	height:600px;
+	position:absolute;
+	/*-webkit-perspective:300;
+	perspective:300;*/
+	}
+
+.character {
+	background-image:url('img/overlays/icon_proceed.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	left:20px;
+	top:20px;
+	width:39px;
+	height:39px;
+	display:block;
+}
+
+</style>
+
+</head>
+
+<body>
+<noscript>
+<meta HTTP-EQUIV="refresh" content="0;url='http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html?ModPagespeed=noscript'" /><style>
+<!--table,div,span,font,p{display:none} -->
+</style>
+
+<div style="display:block">
+Please click <a href="http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html?ModPagespeed=noscript">here</a> if you are not redirected within a few seconds.</div>
+</noscript>
+
+<div class="main">
+<h2>Device Orientation</h2>
+<table>
+<tr>
+<td>Event Supported</td>
+<td id="doEvent"></td>
+</tr>
+<tr>
+<td>Tilt Left/Right [tiltLR]</td>
+<td id="doTiltLR"></td>
+</tr>
+<tr>
+<td>Tilt Front/Back [tiltFB]</td>
+<td id="doTiltFB"></td>
+</tr>
+<tr>
+<td>Direction [direction]</td>
+<td id="doDirection"></td>
+</tr>
+<tr>
+<td>Motion Up/Down</td>
+<td id="doMotionUD"></td>
+</tr>
+</table>
+</div>
+
+<div class="main" id="bkgrnd">
+</div>
+
+<div class="character" id="character">
+</div>
+
+<script type="text/javascript">
+init3();
+var count=0;function init(){
+	if(window.DeviceOrientationEvent){
+		console.log("DeviceOrientation is supported on this device");
+		}
+	else if(window.OrientationEvent){
+		console.log("DeviceOrientation is supported on this device via MozOrientation");
+		}}
+		
+function init2(){
+	if(window.DeviceOrientationEvent){
+		window.addEventListener('deviceorientation',devOrientHandler,false);
+		}
+	else if(window.OrientationEvent){
+		window.addEventListener('MozOrientation',mozDevOrientHandler,false);
+		}}
+
+function init3(){
+	if(window.DeviceOrientationEvent){
+		document.getElementById("doEvent").innerHTML="DeviceOrientation";
+		window.addEventListener('deviceorientation',function(eventData){
+			var bgPosX=50;
+			var bgPosY=180;
+			var LRtransform = 30;
+			var tiltLR=(eventData.gamma * LRtransform) + bgPosY;
+			var tiltFB=bgPosX - eventData.beta;
+			var dir=eventData.alpha;
+			var motUD=null;
+			
+			deviceOrientationHandler(tiltLR,tiltFB,dir,motUD);},false);}
+			
+	else if(window.OrientationEvent){
+		document.getElementById("doEvent").innerHTML="MozOrientation";
+		window.addEventListener('MozOrientation',function(eventData){
+			var tiltLR=eventData.x*5;
+			var tiltFB=eventData.y / 1.25;
+			var dir=null;
+			var motUD=eventData.z;deviceOrientationHandler(tiltLR,tiltFB,dir,motUD);},false);}
+	else{
+		document.getElementById("doEvent").innerHTML="Not supported on your device or browser.  Sorry."
+	}}
+
+function deviceOrientationHandler(tiltLR,tiltFB,dir,motionUD){
+	document.getElementById("doTiltLR").innerHTML=Math.round(tiltLR);
+	document.getElementById("doTiltFB").innerHTML=Math.round(tiltFB);
+	document.getElementById("doDirection").innerHTML=Math.round(dir);
+	document.getElementById("doMotionUD").innerHTML=motionUD;
+	//document.getElementById("bkgrnd").style.backgroundPosition=tiltFB + "%" + " " + tiltLR + "%";
+	document.getElementById("character").style.top=(tiltLR*2.8) + "px";
+	document.getElementById("character").style.left=(tiltFB*40) + "px";
+	}
+    </script>
+
+<script pagespeed_no_defer="">(function(){
+	var e=window,f=Math,g="round",h="",q="&abt=",x="&act=",y="&adt=",z="&afd=",A="&attfb=",B="&mfd=",C="&nbt=",D="&nct=",E="&ndt=",F="&nfd=",G="&nttfb=",H="&rit_css=",I="&rit_img=",J="&rit_link=",K="&rit_script=";e.pagespeed=e.pagespeed||{};
+	var L=e.pagespeed;
+L.getResourceTimingData=function(){
+	if(e.performance&&e.performance.webkitGetEntries){
+		for(var r=0,s=0,k=0,t=0,l=0,u=0,m=0,v=0,n=0,w=0,p=0,c={},d=e.performance.webkitGetEntries(),b=0;b<d.length;b++){
+			var a=d[b].duration;0<a&&(r+=a,++k,s=f.max(s,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(u+=a,++m);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(t+=a,++l);a=d[b].initiatorType;c[a]?++c[a]:c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(w+=a,++p);a=d[b].responseStart-d[b].requestStart;0<a&&(v+=a,
+++n)}
+return z+(k?f[g](r/k):0)+F+k+B+f[g](s)+x+(m?f[g](u/m):0)+D+m+y+(l?f[g](t/l):0)+E+l+q+(p?f[g](w/p):0)+C+p+A+(n?f[g](v/n):0)+G+n+(c.css?H+c.css:h)+(c.link?J+c.link:h)+(c.script?K+c.script:h)+(c.img?I+c.img:h)}
+return h};L.getResourceTimingData=L.getResourceTimingData;})();
+
+(function(){
+	var c=encodeURIComponent,f=window,h="performance",k="",l="&",m="&b_csi=",n="&cces=",p="&ccis=",r="&ccos=",s="&ccrl=",t="&ccul=",u="&connect=",v="&dns=",w="&dom_c=",x="&dwld=",y="&fp=",z="&htmlAt=",A="&ifr=0",B="&ifr=1",C="&nav=",D="&nrp=",E="&nt=",F="&r",G="&ref=",H="&req_start=",I="&ttfb=",J="&url=",K="=",L="?",M="EventStart",N="beforeunload",O="ets=",P="load",Q="load:",R="on",S="unload:";f.pagespeed=f.pagespeed||{};
+	var T=f.pagespeed,U=function(a,d,b,e,g){
+		this.e=a;this.a=d;this.b=b;this.f=g;this.c=e};
+		T.beaconUrl=k;
+U.prototype.d=function(){
+	var a=this.e,d=f.mod_pagespeed_start,b=Number(new Date)-d,a=a+(-1==a.indexOf(L)?L:l),a=a+O+(this.a==P?Q:S),a=a+b;if(this.a!=N||!f.mod_pagespeed_loaded){a+=F+this.a+K;if(f[h]){
+		var b=f[h].timing,e=b.navigationStart,g=b.requestStart,a=a+(b[this.a+M]-e),a=a+(C+(b.fetchStart-e)),a=a+(v+(b.domainLookupEnd-b.domainLookupStart)),a=a+(u+(b.connectEnd-b.connectStart)),a=a+(H+(g-e)),a=a+(I+(b.responseStart-g)),a=a+(x+(b.responseEnd-b.responseStart)),a=a+(w+(b.domContentLoadedEventStart-
+e));f[h].navigation&&(a+=E+f[h].navigation.type);e=-1;b.msFirstPaint?e=b.msFirstPaint:f.chrome&&f.chrome.loadTimes&&(e=Math.floor(1E3*f.chrome.loadTimes().firstPaintTime));-1!=e&&(a+=y+(e-g))}
+	else a+=b;T.getResourceTimingData&&f.parent==f&&(a+=T.getResourceTimingData());a+=f.parent!=f?B:A;this.a==P&&(f.mod_pagespeed_loaded=!0,(b=f.mod_pagespeed_num_resources_prefetched)&&(a+=D+b),(b=f.mod_pagespeed_prefetch_start)&&(a+=z+(d-b)));T.panelLoader&&(d=T.panelLoader.getCsiTimingsString(),d!=k&&(a+=m+d));
+	
+T.criticalCss&&(d=T.criticalCss,a+=p+d.total_critical_inlined_size+n+d.total_original_external_size+r+d.total_overhead_size+s+d.num_replaced_links+t+d.num_unreplaced_links);this.b!=k&&(a+=this.b);this.c!=k&&(a+=G+c(this.c));a+=J+c(this.f);T.beaconUrl=a;(new Image).src=a}};T.g=function(a,d,b,e,g){
+	var q=new U(a,d,b,e,g);f.addEventListener?f.addEventListener(d,function(){q.d()},!1):f.attachEvent(R+d,function(){q.d()})};T.addInstrumentationInit=T.g;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=99_3_vo', 'load', '', 'http://www.html5rocks.com/en/tutorials/device/orientation/', 'http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html');</script>
+
+</body>
+</html>
